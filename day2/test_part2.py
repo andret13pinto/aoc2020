@@ -4,15 +4,12 @@ import part2
 
 
 INPUT = '''\
-1721
-979
-366
-299
-675
-1456
+1-3 a: abcde
+1-3 b: cdefg
+2-9 c: ccccccccc
 '''
 
-result = 241861950
+result = 1
 
 def test():
     assert part2.main(INPUT) == result

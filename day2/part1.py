@@ -1,13 +1,21 @@
+from collections import Counter
+
 def read_input(input_data):
-    return [int(line.strip()) for line in input_data.splitlines()]
+    return [line.strip() for line in input_data.splitlines()]
 
 
 
 def main(input_data):
     lines = read_input(input_data)
-    for i in range(2020):
-        if i in lines and 2020 - i in lines:
-            return i * (2020 - i)
+    res = 0
+    for line in lines:
+        nr_range, char, pwd = line.split()
+        char = char[0]
+        low_range, high_range  = int(nr_range.split('-')[0]), int(nr_range.split('-')[1])
+        c = Counter(pwd)
+        if low_range <= c[char] <= high_range:
+            res+=1
+    return res
 
 
 
