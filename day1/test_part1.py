@@ -15,4 +15,4 @@ INPUT = '''\
 result = 514579
 
 def test():
-    assert day1.main(INPUT) == result
+    assert part1.main(INPUT) == result
